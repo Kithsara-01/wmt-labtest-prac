@@ -10,13 +10,13 @@ export default function ItemForm({ onItemAdded }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         await createItem({
-            name, description, price: Number(price), quantity: Number(quantity),
+            name, description, price: Number(price), quantity: Number(quantity), category,
         });  // ← UPDATED
         setName('');
         setDescription('');
         setPrice('');  // ← NEW
-        setQuantity('');
-        setCategory('');
+        setQuantity('');// ← NEW
+        setCategory('');// ← NEW
         onItemAdded();
 
     };
