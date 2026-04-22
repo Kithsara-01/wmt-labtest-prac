@@ -4,16 +4,16 @@ export default function ItemForm({ onItemAdded }) {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');   // ← NEW
-    const [quentity, setQuentity] = useState('');
+    const [quantity, setQuantity] = useState('');
     const handleSubmit = async (e) => {
         e.preventDefault();
         await createItem({
-            name, description, price: Number(price), quentity: Number(quentity),
+            name, description, price: Number(price), quantity: Number(quantity),
         });  // ← UPDATED
         setName('');
         setDescription('');
         setPrice('');  // ← NEW
-        setQuentity('');
+        setQuantity('');
         onItemAdded();
     };
     return (
@@ -48,8 +48,8 @@ export default function ItemForm({ onItemAdded }) {
                 <input
                     placeholder="Quentity (e.g. 45)"
                     type="number"
-                    value={quentity}
-                    onChange={e => setQuentity(e.target.value)}
+                    value={quantity}
+                    onChange={e => setQuantity(e.target.value)}
                     required
                 />
             </div>
