@@ -5,6 +5,7 @@ const ItemSchema = new mongoose.Schema({
     description: { type: String, required: true },
     price: { type: Number, required: true },   // ← NEW FIELD YOU ADD
     quantity: { type: Number, required: true }, // <- new added field
+    category: { type: String, required: true },
 }, { timestamps: true });
 
 

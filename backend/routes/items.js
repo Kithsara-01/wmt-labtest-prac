@@ -19,6 +19,7 @@ router.post('/', async (req, res) => {
         description: req.body.description,
         price: req.body.price,
         quantity: req.body.quantity,
+        category: req.body.category,
 
         // will work once you add price to the model
     });
