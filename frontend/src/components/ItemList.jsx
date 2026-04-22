@@ -15,6 +15,8 @@ export default function ItemList({ items, onRefresh }) {
                     {/* ← NEW */}
                     <p><strong>Quantity : {item.quantity}</strong></p>
                     {/* ← NEW */}
+                    <p><strong><i>Category : {item.category}</i></strong></p>
+                    {/* ← NEW */}
                     <button onClick={() => handleDelete(item._id)}>Delete</button>
                 </div>
             ))}

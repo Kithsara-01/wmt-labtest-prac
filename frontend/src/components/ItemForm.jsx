@@ -5,6 +5,8 @@ export default function ItemForm({ onItemAdded }) {
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');   // ← NEW
     const [quantity, setQuantity] = useState('');
+    const [category, setCategory] = useState('');
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         await createItem({
@@ -14,7 +16,9 @@ export default function ItemForm({ onItemAdded }) {
         setDescription('');
         setPrice('');  // ← NEW
         setQuantity('');
+        setCategory('');
         onItemAdded();
+
     };
     return (
         <form onSubmit={handleSubmit} style={{ marginBottom: '2rem' }}>
@@ -54,6 +58,17 @@ export default function ItemForm({ onItemAdded }) {
                 />
             </div>
             {/* ← NEW */}
+
+            <div>
+                <input
+                    placeholder="Item Category"
+                    value={category}
+                    onChange={e => setCategory(e.target.value)}
+                    required
+                />
+            </div>
+            {/* ← NEW */}
+
             <button type="submit">Add Item</button>
         </form >
     );
