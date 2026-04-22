@@ -4,6 +4,7 @@ const ItemSchema = new mongoose.Schema({
     name: { type: String, required: true },
     description: { type: String, required: true },
     price: { type: Number, required: true },   // ← NEW FIELD YOU ADD
+    quentity: { type: Number, required: true }, // <- new added field
 }, { timestamps: true });
 
 

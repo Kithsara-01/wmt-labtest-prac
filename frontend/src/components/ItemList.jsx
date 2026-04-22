@@ -13,6 +13,8 @@ export default function ItemList({ items, onRefresh }) {
                     <p>{item.description}</p>
                     <p><strong>Price: ${item.price}</strong></p>
                     {/* ← NEW */}
+                    <p><strong>Quentity : {item.quentity}</strong></p>
+                    {/* ← NEW */}
                     <button onClick={() => handleDelete(item._id)}>Delete</button>
                 </div>
             ))}
